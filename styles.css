@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#header {
+    background-color: hsl(0, 0%, 93%);
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+#header-img {
+    max-width: 100px;
+}
+
+.nav-bar__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.nav-link {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+    padding: 0.5rem 1rem;
+}
+
+main {
+    margin-top: 5em;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.568);
+    color: #fff;
+    border-radius: 5px;
+}
+
+#form {
+    width: 80%;
+    max-width: 400px;
+    margin: 2em auto;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#email {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border-radius: 5px;
+    outline: none;
+}
+
+#email::placeholder {
+    color: #5e5d5d;
+}
+
+#submit {
+    width: 60%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: hsl(98, 95%, 40%);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: hsl(98, 100%, 40%);
+    border: 1px solid #5e5d5d;
+}
+
+.logo {
+    width: 100%;
+    max-width: 500px;
+    margin: 3rem auto;
+}
+
+
+#Photo_Gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+#Photo_Gallery img:hover {
+    transform: scale(1.3);
+    transition: all 0.5s ease-in-out;
+}
+
+.product-image {
+    margin: 5rem auto;
+}
+
+#About {
+    padding: 2em ;
+}
+
+#About article {
+    padding: 1em;
+}
+
+#About article h2 {
+    margin-bottom: 0.5em;
+}
+
+#About article h2::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: #5e5d5d;
+    margin: 0.5em auto;
+}
+
+#About article p {
+    line-height: 1.5;
+}
+
+iframe {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    height: 400px;
+    margin: 3rem auto;
+}
+
+footer {
+    text-align: center;
+    background-color: hsl(0, 0%, 93%);
+    width: 100%;
+    padding: 1em;
+}
+
+footer p {
+    font-size: 0.8rem;
+    margin-top: 1em;
+}
+
+footer p > a {
+    color: #030852;
+    text-decoration: none;
+}
+
+footer p > a:hover {
+    color: #0308529c;
+    text-decoration: underline;
+}
+
+.footer-nav__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footer-nav__list a {
+    margin-left: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+    padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width: 630px) {
+
+    #header {
+        padding: 0.5em;
+    }
+
+  .nav-bar__list,
+  .footer-nav__list {
+        flex-direction: column;
+        justify-content: space-between;
+  }
+
+    .nav-link {
+        margin-left: 0;
+        margin-bottom: 3em;
+        padding: 0.1em;
+        font-size: 1rem;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    main {
+        margin-top: 6em;
+        padding: 1em;
+    }
+
+    .product-image {
+        margin: 1em auto;
+    }
+
+    #Photo_Gallery img:hover {
+        transform: scale(1.2);
+        transition: all 0.5s ease-in-out;
+    }
+
+    #About {
+        padding: 1em;
+    }
+
+    #video {
+        margin: 1em auto;
+    }
+}
